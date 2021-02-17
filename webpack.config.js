@@ -1,12 +1,28 @@
+const { resolve } = require('path');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
     mode: 'development',
+    entry: './src/index.js',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
+
+    devtool: 'inline-source-map',
+    devServer: {
+        // tells webpack-dev-server to serve files in dist directory on localhost:8080
+        contentBase: './dist'
+    },
+
+    plugins: [
+        new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+        new HtmlWebpackPlugin({
+            title: 'Development',
+        })
+    ],
 
     module: {
         rules: [
