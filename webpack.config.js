@@ -14,7 +14,8 @@ module.exports = {
     devtool: 'inline-source-map',
     devServer: {
         // tells webpack-dev-server to serve files in dist directory on localhost:8080
-        contentBase: './dist'
+        contentBase: './dist',
+        hot: true,
     },
 
     plugins: [
