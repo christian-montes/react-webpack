@@ -24,8 +24,18 @@ module.exports = {
         })
     ],
 
+    resolve: {
+        extensions: [".js", '.jsx'],
+    },
+
     module: {
         rules: [
+            {
+                test: /.(js|jsx)$/i,
+                exclude: /node_modules/,
+                use: ['babel-loader'],
+            },
+
             {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
@@ -43,7 +53,7 @@ module.exports = {
 
             {
                 test: /\.(csv|tsv)$/i,
-                use: [csv-loader],
+                use: ['csv-loader'],
             },
 
             {
