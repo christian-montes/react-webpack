@@ -13,7 +13,7 @@
     "url": "git+https://github.com/christian-montes/react-webpack.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Christian Montes",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/christian-montes/react-webpack/issues"
@@ -36,8 +36,10 @@
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "lodash": "^4.17.20",
     "react": "^17.0.1",
+    "react-bootstrap": "^1.5.0",
     "react-dom": "^17.0.1"
   }
 }
