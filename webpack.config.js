@@ -34,7 +34,7 @@ module.exports = {
             {
                 test: /.(js|jsx)$/i,
                 exclude: /node_modules/,
-                use: ['babel-loader'],
+                use: ['babel-loader'], // may need to add ESLint 
             },
 
             {
